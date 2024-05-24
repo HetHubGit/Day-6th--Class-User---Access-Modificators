@@ -5,27 +5,41 @@ User user4 = new User("Julia", "Pass738");
 
 
 user1.AddScore(5);
+user1.AddScore(2);
+var result = user1.Result;
+Console.WriteLine(result);
+var name = User.GameName;
+var pi = Math.PI;
+
 
 class User
 {
-    private int score;
+    public static string GameName = "Lokomotive";
+    private List<int> score = new List<int>();
    
    
     public User(String login, String password)
     {  
         this.Login = login;
         this.Password = password;
-        this.score = 0;
+        
     }
     public string Login { get; private set; }
 
     public string Password { get; private set; }
+    public int Result 
+    {
+        get 
+        {
+            return this.score.Sum();
+        } 
+    }
 
-    
 
     public void AddScore(int number)
     {
-        this.score += number; // this.score = this.score + number - to samo tylko skrócone.
+       // this.score += number; // this.score = this.score + number - to samo tylko skrócone.
+       this.score.Add(number);
     }
 
 
