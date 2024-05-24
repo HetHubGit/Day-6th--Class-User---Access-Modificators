@@ -25,7 +25,7 @@ class User
 
     public void AddScore(int number)
     {
-        this.score += number; // this.score = this.score + number - to samo tylko skrócone
+        this.score += number; // this.score = this.score + number - to samo tylko skrócone.
     }
 
 
